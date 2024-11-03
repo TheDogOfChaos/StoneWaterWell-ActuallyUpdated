@@ -1,0 +1,11 @@
+{
+  "name": "StoneWaterWell-ActuallyUpdated",
+  "version": "2.0.1",
+  "factorio_version": "2.0",
+  "title": "Stone Water Well",
+  "author": "2.0 ACUTALLY WORKING from TheDogOfChaos, 2.0 support from quindao, bSun0000, 0.15 update support from ElecNinja, 0.16 update as offshore pump by Roy",
+  "contact": "-",
+  "homepage": "https://forums.factorio.com/viewtopic.php?f=93&t=26937",
+  "description": "Fresh water anywhere.",
+  "dependencies": ["base", "! quality"]
+}
