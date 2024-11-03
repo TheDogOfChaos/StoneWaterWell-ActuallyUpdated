@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 3rd November 2024
+  Bugfixes:
+    - Hopefully fixed the issue with recycling (if this works, thank you DarkSlayerEX)
+  Changes:
+    - Marked 'quality' as a hidden optional dependency (previously incompatible).
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2nd November 2024
+  Changes:
+    - Temporarily marked as incompatible with the Space Age 'quality' mod.
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 1st November 2024
+  Major Features:
+    - Initial fork.
+  Bugfixes:
+    - Fixed the graphics path having not been updated
