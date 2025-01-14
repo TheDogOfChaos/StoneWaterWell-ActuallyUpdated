@@ -1,15 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 14th January 2025
+  Changes:
+    - [space-age] Made the well only craftable & placeable on surfaces with a pressure between 1000 hPa and 2000 hPa.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 3rd November 2024
   Bugfixes:
     - Hopefully fixed the issue with recycling (if this works, thank you DarkSlayerEX)
   Changes:
-    - Marked 'quality' as a hidden optional dependency (previously incompatible).
+    - [space-age] Marked 'quality' as a hidden optional dependency (previously incompatible).
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2nd November 2024
   Changes:
-    - Temporarily marked as incompatible with the Space Age 'quality' mod.
+    - [space-age] Temporarily marked as incompatible with the Space Age 'quality' mod.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 1st November 2024

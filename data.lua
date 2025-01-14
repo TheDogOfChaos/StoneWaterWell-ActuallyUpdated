@@ -26,6 +26,14 @@ waterwell.fluid_box.filter = "water"
 waterwell.pumping_speed = 20
 waterwell.minable = {mining_time = 1, result = "stone-waterwell"}
 waterwell.flags = {"placeable-neutral", "player-creation"}
+waterwell.surface_conditions =
+{
+	{
+		property = "pressure",
+		min = 1000,
+		max = 2000
+	}
+}
 waterwell.adjacent_tile_collision_test = {"ground-tile"}
 waterwell.adjacent_tile_collision_mask = nil
 waterwell.collision_box = {{-2.2, -2.2}, {2.2, 2.2}}
@@ -43,7 +51,7 @@ waterwell.circuit_connector_sprites = circuit_connector_definitions["storage-tan
 
 data:extend(
 {
-	waterwell, 
+	waterwell,
 	{
 		type = "recipe",
 		name = "stone-waterwell",
@@ -53,6 +61,14 @@ data:extend(
 			{type = "item", name = "stone-brick", amount = 8},
 			{type = "item", name = "stone", amount = 40},
 			{type = "item", name = "offshore-pump", amount = 1}
+		},
+		surface_conditions =
+		{
+			{
+				property = "pressure",
+				min = 1000,
+				max = 2000
+			}
 		},
 		results = {{type="item", name="stone-waterwell", amount=1}}
 	},
