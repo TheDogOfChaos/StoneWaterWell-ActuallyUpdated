@@ -81,5 +81,26 @@ data:extend(
 		order = "b[fluids]-a[stone-waterwell]",
 		place_result = "stone-waterwell",
 		stack_size = 5
-	}
+	},
+	{
+		type = "technology",
+		name = "deep-water-well",
+		icon_size = 256,
+		icon = "__StoneWaterWell-ActuallyUpdated__/graphics/stone-waterwell.icon.png",
+		prerequisites = {"logistic-science-pack"},
+		effects =
+		{
+		  {
+			type = "unlock-recipe",
+			recipe = "stone-waterwell"
+		  }
+		},
+		unit =
+		{
+		  count = 100,
+		  ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}},
+		  time = 20
+		},
+		order = "c-a"
+	  }
 })

@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 14th January 2025
+  Changes:
+    - Made the well now require a technology to unlock the recipe for. Said technology is specifically after logistic science, to alleviate confusion for newer players).
+---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 14th January 2025
   Changes:
