@@ -1,12 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.5
+Date: 15th January 2025
+  Locale:
+    - Remembered to give the technology some actual lang entries.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 14th January 2025
-  Changes:
-    - Made the well now require a technology to unlock the recipe for. Said technology is specifically after logistic science, to alleviate confusion for newer players).
+  Balancing:
+    - Made the well now require a technology to unlock the recipe for. Said technology is specifically after logistic science, to alleviate confusion for newer players.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 14th January 2025
-  Changes:
+  Balancing:
     - [space-age] Made the well only craftable & placeable on surfaces with a pressure between 1000 hPa and 2000 hPa.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2

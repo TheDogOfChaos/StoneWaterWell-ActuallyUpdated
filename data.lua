@@ -90,17 +90,17 @@ data:extend(
 		prerequisites = {"logistic-science-pack"},
 		effects =
 		{
-		  {
-			type = "unlock-recipe",
-			recipe = "stone-waterwell"
-		  }
+			{
+				type = "unlock-recipe",
+				recipe = "stone-waterwell"
+			}
 		},
 		unit =
 		{
-		  count = 100,
-		  ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}},
-		  time = 20
+			count = 100,
+			ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}},
+			time = 20
 		},
 		order = "c-a"
-	  }
+	}
 })
