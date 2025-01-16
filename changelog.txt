@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: 16th January 2025
+  Bugfixes:
+    - Disabled the recipe for water wells by default (i forgot to add 'enabled=false' to the recipe)
+---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 15th January 2025
   Bugfixes:

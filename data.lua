@@ -52,7 +52,8 @@ local waterwellRecipe = {
 		{type = "item", name = "stone", amount = 40},
 		{type = "item", name = "offshore-pump", amount = 1}
 	},
-	results = {{type="item", name="stone-waterwell", amount=1}}
+	results = {{type="item", name="stone-waterwell", amount=1}},
+	enabled=false -- we don't want this recipe enabled at the start of the game
 }
 
 local pressureReq = {
