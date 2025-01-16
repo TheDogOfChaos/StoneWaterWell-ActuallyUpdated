@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: 15th January 2025
+  Bugfixes:
+    - The mod should now work without requiring Space Age enabled. If it doesn't, let me know.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 15th January 2025
   Locale:

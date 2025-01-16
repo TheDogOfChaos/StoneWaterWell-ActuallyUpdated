@@ -26,14 +26,7 @@ waterwell.fluid_box.filter = "water"
 waterwell.pumping_speed = 20
 waterwell.minable = {mining_time = 1, result = "stone-waterwell"}
 waterwell.flags = {"placeable-neutral", "player-creation"}
-waterwell.surface_conditions =
-{
-	{
-		property = "pressure",
-		min = 1000,
-		max = 2000
-	}
-}
+
 waterwell.adjacent_tile_collision_test = {"ground-tile"}
 waterwell.adjacent_tile_collision_mask = nil
 waterwell.collision_box = {{-2.2, -2.2}, {2.2, 2.2}}
@@ -49,29 +42,36 @@ waterwell.fluid_box.pipe_connections[1].position = {0, 2.2}
 waterwell.circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points
 waterwell.circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites
 
+local waterwellRecipe = {
+	type = "recipe",
+	name = "stone-waterwell",
+	energy_required = 10,
+	ingredients = {
+		{type = "item", name = "iron-stick", amount = 4},
+		{type = "item", name = "stone-brick", amount = 8},
+		{type = "item", name = "stone", amount = 40},
+		{type = "item", name = "offshore-pump", amount = 1}
+	},
+	results = {{type="item", name="stone-waterwell", amount=1}}
+}
+
+local pressureReq = {
+	{
+		property = "pressure",
+		min = 1000,
+		max = 2000
+	}
+}
+
+if mods["space-age"] then
+	waterwell.surface_conditions = pressureReq
+	table.insert(waterwellRecipe, pressureReq)
+end
+
 data:extend(
 {
 	waterwell,
-	{
-		type = "recipe",
-		name = "stone-waterwell",
-		energy_required = 10,
-		ingredients = {
-			{type = "item", name = "iron-stick", amount = 4},
-			{type = "item", name = "stone-brick", amount = 8},
-			{type = "item", name = "stone", amount = 40},
-			{type = "item", name = "offshore-pump", amount = 1}
-		},
-		surface_conditions =
-		{
-			{
-				property = "pressure",
-				min = 1000,
-				max = 2000
-			}
-		},
-		results = {{type="item", name="stone-waterwell", amount=1}}
-	},
+	waterwellRecipe,
 	{
 		type = "item",
 		name = "stone-waterwell",
