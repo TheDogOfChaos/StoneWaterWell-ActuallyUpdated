@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.8
+Date: 17th January 2025
+  Changes:
+    - There is now a startup setting to toggle whether the well's recipe requires its technology.
+      [color=orange]Disable the setting if you're using any mods that make the Iron Stick recipe available from the start.
+      [color=red]The setting is hidden and forced to false if Pyanodons Coal Processing is enabled, as it explicitly makes iron sticks available from the start of the game.
+  Other:
+    - As always, let me know if this update breaks anything else.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.7
 Date: 16th January 2025
   Bugfixes:

@@ -53,7 +53,7 @@ local waterwellRecipe = {
 		{type = "item", name = "offshore-pump", amount = 1}
 	},
 	results = {{type="item", name="stone-waterwell", amount=1}},
-	enabled=false -- we don't want this recipe enabled at the start of the game
+	enabled = false
 }
 
 local pressureReq = {
@@ -64,13 +64,29 @@ local pressureReq = {
 	}
 }
 
-if mods["space-age"] then
-	waterwell.surface_conditions = pressureReq
-	table.insert(waterwellRecipe, pressureReq)
-end
+local deepWaterWellTechnology = {
+	type = "technology",
+	name = "deep-water-well",
+	icon_size = 256,
+	icon = "__StoneWaterWell-ActuallyUpdated__/graphics/stone-waterwell.icon.png",
+	prerequisites = {"logistic-science-pack"},
+	effects =
+	{
+		{
+			type = "unlock-recipe",
+			recipe = "stone-waterwell"
+		}
+	},
+	unit =
+	{
+		count = 100,
+		ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}},
+		time = 20
+	},
+	order = "c-a"
+}
 
-data:extend(
-{
+local dataToExtend = {
 	waterwell,
 	waterwellRecipe,
 	{
@@ -82,26 +98,19 @@ data:extend(
 		order = "b[fluids]-a[stone-waterwell]",
 		place_result = "stone-waterwell",
 		stack_size = 5
-	},
-	{
-		type = "technology",
-		name = "deep-water-well",
-		icon_size = 256,
-		icon = "__StoneWaterWell-ActuallyUpdated__/graphics/stone-waterwell.icon.png",
-		prerequisites = {"logistic-science-pack"},
-		effects =
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "stone-waterwell"
-			}
-		},
-		unit =
-		{
-			count = 100,
-			ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}},
-			time = 20
-		},
-		order = "c-a"
 	}
-})
+}
+
+if mods["space-age"] then
+	waterwell.surface_conditions = pressureReq
+	table.insert(waterwellRecipe, pressureReq)
+end
+
+if settings.startup["deep-water-well-tech-enabledness"].value == false then
+	waterwellRecipe.enabled = true
+else
+	table.insert(dataToExtend, deepWaterWellTechnology)
+end
+
+-- Extend the finalised Prototype data.
+data:extend(dataToExtend)

@@ -1,15 +1,16 @@
 {
   "name": "StoneWaterWell-ActuallyUpdated",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "factorio_version": "2.0",
   "title": "Stone Water Well",
-  "author": "2.0 support from TheDogOfChaos, 2.0 support from quindao, bSun0000, 0.15 update support from ElecNinja, 0.16 update as offshore pump by Roy",
+  "author": "2.0 support from TheDogOfChaos, quindao and bSun0000, 0.15 update support from ElecNinja, 0.16 update as offshore pump by Roy",
   "contact": "-",
   "homepage": "https://github.com/TheDogOfChaos/StoneWaterWell-ActuallyUpdated",
-  "description": "Fresh water anywhere.",
+  "description": "Fresh water, anywhere you want.",
   "dependencies": [
     "base",
     "(?) quality",
-    "? space-age"
+    "(?) space-age",
+    "(?) pycoalprocessing"
   ]
 }
