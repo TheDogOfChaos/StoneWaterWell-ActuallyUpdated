@@ -37,7 +37,13 @@ waterwell.collision_mask = {
 waterwell.adjacent_tile_collision_test = { "ground-tile" }
 waterwell.adjacent_tile_collision_mask = nil
 
-waterwell.fluid_box.pipe_connections[1].position = {0, 2.2}
+waterwell.fluid_box.pipe_connections = {
+	{
+		position = {0, 2},
+		direction = defines.direction.south,
+		flow_direction = "output"
+	}
+}
 
 waterwell.circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points
 waterwell.circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites
